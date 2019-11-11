@@ -3,7 +3,7 @@ from translate import Translator
 
 #Translator function 
 def translate():
-    translator= Translator(from_lang=lan1.get(),to_lang=lan2.get())
+    translator = Translator(from_lang=lan1.get(),to_lang=lan2.get())
     translation = translator.translate(var.get())
     var1.set(translation)
 
@@ -23,7 +23,7 @@ lan1 = StringVar(root)
 lan2 = StringVar(root)
 
 #choices to show in dropdown menu
-choices = { 'English','Hindi','Gujarati','Spanish','German'}
+choices = { 'English','Hindi','Gujarati','Spanish','German','Chinese'}
 #default selection for dropdownlists
 lan1.set('English')
 lan2.set('Hindi')
@@ -38,7 +38,7 @@ Label(mainframe,text="Select a language").grid(row = 0, column = 2)
 lan2menu.grid(row = 1, column =2)
 
 #Text Box to take user input
-Label(mainframe, text = "Enter text").grid(row=2,column=0)
+Label(mainframe, text = "Enter the text").grid(row=2,column=0)
 var = StringVar()
 textbox = Entry(mainframe, textvariable=var).grid(row=2,column=1)
 
